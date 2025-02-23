@@ -13,7 +13,7 @@ const ThemeSwitcher = () => {
         >
             <span
                 className={`inline-block h-[20px] w-[20px] transform rounded-full transition 
-                    ${theme === "dark" ? "bg-white translate-x-0" : "bg-purple translate-x-[19px]"}`}
+                    ${theme === "dark" ? "bg-white" : "bg-purple translate-x-[19px]"}`}
             />
         </Switch>
     );

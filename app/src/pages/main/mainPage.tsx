@@ -1,12 +1,8 @@
 import {ReactNode} from 'react';
 import ThemeSwitcher from "@/shared/ui/theme";
 import Button, {EButtonVariant} from "@/shared/ui/buttons";
-import BasketIcon from "@/assets/icons/basket_icon.svg";
-import CloseIcon from "@/assets/icons/close_icon.svg";
-import DownloadIcon from "@/assets/icons/download_icon.svg";
-import LinkIcon from "@/assets/icons/link_icon.svg";
-import SearchIcon from "@/assets/icons/search_icon.svg";
-import TagsIcon from "@/assets/icons/tags_icon.svg";
+import Select from "@/shared/ui/select";
+import Input, {EInputVariant} from  "@/shared/ui/inputs"
 
 
 const MainPage = (): ReactNode => {
@@ -33,18 +29,23 @@ const MainPage = (): ReactNode => {
                 </div>
                 <div className="grid grid-cols-10 gap-4">
                     <div>
-                        <Button variant={EButtonVariant.ICON} src={BasketIcon}/>
+                        <Button variant={EButtonVariant.ICON} icon={"ci:trash-full"}/>
                     </div>
-                    <div>
-                        <Button variant={EButtonVariant.ICON} src={CloseIcon}/>
-                    </div>
-                    <div><Button variant={EButtonVariant.ICON} src={DownloadIcon}/></div>
-                    <div><Button variant={EButtonVariant.ICON} src={LinkIcon}/></div>
-                    <div><Button variant={EButtonVariant.ICON} src={SearchIcon}/></div>
-                    <div><Button variant={EButtonVariant.ICON} src={TagsIcon}/></div>
-
 
                 </div>
+            </section>
+            <section>
+                <div>
+                    <Select options={["Option 1", "Option 2", "Option 3"]}/>
+                </div>
+                <div>
+                    <Input variant={EInputVariant.BASE} type={'text'} placeholder={'E-mail*'}/>
+                    <Input variant={EInputVariant.BASE} type={'password'} placeholder={'Пароль*'}/>
+                    <Input variant={EInputVariant.CHECKBOX} type={'checkbox'}/>
+                    <Input variant={EInputVariant.FILE_INPUT} type={'file'} placeholder={'Загрузить'}/>
+
+                </div>
+
             </section>
         </main>
     );

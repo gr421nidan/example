@@ -18,14 +18,11 @@ export const ThemeContext = createContext<IThemeContextProps>(defaultThemeContex
 
 export const ThemeProvider = ({children}: PropsWithChildren) => {
     const [theme, setTheme] = useState<Theme>(() => {
-        if (typeof window !== "undefined") {
-            const storeTheme = localStorage.getItem("theme") as Theme;
-            if (storeTheme) {
-                document.documentElement.setAttribute("data-theme", storeTheme);
-            }
-            return storeTheme || "light";
+        const storeTheme = localStorage.getItem("theme") as Theme;
+        if (storeTheme) {
+            document.documentElement.setAttribute("data-theme", storeTheme);
         }
-        return "light";
+        return storeTheme || "light";
     });
 
     const switchTheme = () => {

@@ -27,6 +27,7 @@
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@feature-sliced/eslint-config": "^0.1.1",
+    "@iconify/react": "^5.2.0",
     "@tanstack/eslint-plugin-query": "^5.65.0",
     "@types/node": "^22.13.4",
     "@types/react": "^19.0.8",

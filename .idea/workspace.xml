@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/app/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/app/providers/ThemeProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/theme/index.tsx" afterDir="false" />
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="Тема и кнопки">
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/providers/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/providers/ThemeProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/icons/basket_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/icons/close_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/icons/download_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/icons/link_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/icons/search_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/assets/icons/tags_icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/theme/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/theme/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -102,10 +113,25 @@
       <workItem from="1740148001323" duration="81000" />
       <workItem from="1740148090632" duration="13667000" />
       <workItem from="1740162279444" duration="2560000" />
+      <workItem from="1740212706040" duration="206000" />
+      <workItem from="1740312123717" duration="15950000" />
     </task>
+    <task id="LOCAL-00001" summary="Тема и кнопки">
+      <option name="closed" value="true" />
+      <created>1740212746886</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740212746886</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Тема и кнопки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Тема и кнопки" />
   </component>
 </project>

@@ -5,11 +5,11 @@
 body{
     min-width: 1920px;
     min-height: 1280px;
-    background-color: #ffeeee;
+    background-color: #ffffff;
     font-family: "Nunito", serif;
 }
 [data-theme="dark"] body {
-    background-color: #771f1f;
+    background-color: #230E36;
 }
 
 @theme {
@@ -19,4 +19,5 @@ body{
     --color-gray: rgba(0, 0, 0, 0.7);
     --color-secondaryPurple: rgba(84, 56, 126, 0.5);
     --color-secondaryDarkPurple: #483B55;
+    --color-buttonBg: rgba(252, 249, 255, 0.16);
 }
