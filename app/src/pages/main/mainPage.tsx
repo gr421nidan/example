@@ -1,58 +1,55 @@
-import {ReactNode} from 'react';
+import { ReactNode } from 'react';
 import ThemeSwitcher from "@/shared/ui/theme";
-import Button, {EButtonVariant} from "@/shared/ui/buttons";
+import Button, { EButtonVariant } from "@/shared/ui/buttons";
 import Select from "@/shared/ui/select";
-import Input, {EInputVariant} from "@/shared/ui/inputs/input.tsx"
+import Input, { EInputVariant } from "@/shared/ui/inputs/input.tsx";
 import OtpCodeInput from "@/shared/ui/inputs/otpInput.tsx";
 
-
 const MainPage = (): ReactNode => {
-
     return (
-        <main className="p-4 m-5">
-            <header className="text-center h-10 bg-amber-200 dark:bg-amber-700 ">
-                <div>
-
-                </div>
+        <main className="p-6 max-w-3xl mx-auto space-y-6">
+            <header className="text-center p-6 bg-amber-200 dark:bg-amber-700 rounded-xl shadow-md">
+                <h1 className="text-2xl font-semibold text-gray-700 dark:text-white">Главная страница</h1>
             </header>
-            <ThemeSwitcher/>
-            <section>
-                <div className="text-center h-10 bg-amber-200 dark:bg-amber-700 "></div>
-                <h1>sdfasdf</h1>
-                <div>
-                    <div>
-                        <Button variant={EButtonVariant.BASE} className="w-[318px]" label='Отправить письмо'/>
-                    </div>
-                    <div>
-                        <Button variant={EButtonVariant.BASE} label='Сохранить'/>
-                    </div>
 
+            <ThemeSwitcher />
+
+            <section className="space-y-6">
+                <h2 className="text-lg font-medium text-gray-800 dark:text-white">Акции</h2>
+                <div className="flex flex-col items-center gap-4">
+                    <Button variant={EButtonVariant.BASE} className="w-[318px] " label='Отправить письмо' />
+                    <Button variant={EButtonVariant.BASE} className="w-[318px]" label='Сохранить' />
                 </div>
-                <div className="grid grid-cols-10 gap-4">
-                    <div>
-                        <Button variant={EButtonVariant.ICON} icon={"ci:trash-full"}/>
-                    </div>
 
+                <div className="grid grid-cols-10 gap-4">
+                    <Button variant={EButtonVariant.ICON} icon={"ci:trash-full"} />
                 </div>
             </section>
-            <section>
-                <div>
-                    <Select options={["Option 1", "Option 2", "Option 3"]}/>
-                </div>
-                <div>
-                    <Input variant={EInputVariant.BASE} className="w-[474px]" type={'text'} placeholder={'E-mail*'}/>
 
-                    <Input variant={EInputVariant.CHECKBOX} type={'checkbox'}/>
-                    <Input variant={EInputVariant.FILE_INPUT} type={'file'} placeholder={'Загрузить'}/>
+            <section className="space-y-6">
+                <div className="mb-4">
+                    <Select defaultOption={'Права'} options={["Просмотр", "Полный доступ"]} className="w-[474px]" />
                 </div>
-                <div>
-                    <OtpCodeInput numInputs={6} inputMode="numeric"/>
+
+                <div className="space-y-4">
+                    <Input variant={EInputVariant.BASE} className="w-[474px]" type='text' placeholder='E-mail*' />
+                    <Input variant={EInputVariant.CHECKBOX} type='checkbox' className="h-6 w-6" />
+                    <Input variant={EInputVariant.FILE_INPUT} type='file' placeholder='Загрузить'  />
                 </div>
+
                 <div>
-                    <Input variant={EInputVariant.SEARCH} className="w-[474px]" placeholder={'Поиск'}/>
+                    <OtpCodeInput numInputs={6} inputMode="numeric" className="space-x-2" />
                 </div>
-                <div>
-                    <Input variant={EInputVariant.PASSWORD} className="w-[474px]" placeholder={'Пароль*'}/>
+
+                <div className="space-y-4">
+                    <Input variant={EInputVariant.SEARCH} className="w-[300px]" placeholder='Поиск' />
+                </div>
+
+                <div className="space-y-4">
+                    <Input variant={EInputVariant.PASSWORD} className="w-[474px]" placeholder='Пароль*' />
+                </div>
+                <div className="space-y-4">
+                    <Input variant={EInputVariant.DATE} className="w-[170px]" />
                 </div>
             </section>
         </main>

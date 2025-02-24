@@ -6,11 +6,8 @@ body{
     min-width: 1920px;
     min-height: 1280px;
     background-color: #ffffff;
-    font-family: "Nunito", serif;
+    font-family: "Nunito", sans-serif;
     font-size: 25px;
-}
-[data-theme="dark"] body {
-    background-color: #230E36;
 }
 
 @theme {
@@ -22,7 +19,11 @@ body{
     --color-secondaryDarkPurple: #483B55;
     --color-buttonBg: rgba(252, 249, 255, 0.16);
 }
+[data-theme="dark"] body {
+    background-color: #230E36;
+}
 @layer base {
+
     input[type="number"]::-webkit-inner-spin-button,
     input[type="number"]::-webkit-outer-spin-button {
         -webkit-appearance: none;
@@ -30,35 +31,31 @@ body{
     }
 }
 .btn, .input {
-    @apply cursor-pointer border rounded-[20px] transition-all duration-200;
+    @apply cursor-pointer border rounded-[20px] transition-all duration-200 outline-none;
 }
 
 .btn {
-    @apply h-[52px] border-2 text-center items-center justify-center bg-white text-black border-[var(--color-purple)]
-    hover:border-[var(--color-lightPurple)] hover:text-[var(--color-gray)] hover:shadow-[0_0_20px_var(--color-lightPurple)]
-    dark:text-white dark:hover:text-white dark:bg-[var(--color-buttonBg)] dark:active:text-[var(--color-purple)] dark:hover:border-[var(--color-purple)]
-    active:text-[var(--color-purple)] active:shadow-none active:border-[var(--color-purple)];
+    @apply h-[52px] border-2 text-center items-center justify-center bg-white text-black border-purple
+    hover:border-lightPurple hover:text-gray hover:shadow-[0_0_20px_var(--color-lightPurple)]
+    dark:text-white dark:hover:text-white dark:bg-buttonBg dark:active:text-purple dark:hover:border-purple
+    active:text-purple active:shadow-none active:border-purple;
 }
 
 .btn-icon {
     @apply text-purple hover:drop-shadow-[0_0_5px_var(--color-purple)]
-    dark:text-[var(--color-lightPurple)] dark:hover:text-[var(--color-purple)] dark:hover:drop-shadow-[0_0_5px_var(--color-purple)];
+    dark:text-lightPurple dark:hover:text-purple dark:hover:drop-shadow-[0_0_5px_var(--color-purple)];
+}
+.input_icon {
+    @apply cursor-pointer absolute top-0 end-4 h-full flex items-center text-lightPurple dark:text-white;
 }
 .input {
-    @apply h-[54px] px-[27px] bg-white placeholder-black border-[var(--color-purple)]
+    @apply h-[54px] px-[27px] bg-white placeholder-black border-purple
     hover:shadow-[0_0_20px_var(--color-lightPurple)] focus:shadow-none outline-none focus:placeholder-transparent
-    dark:text-white dark:bg-[var(--color-buttonBg)] dark:placeholder-white;
+    dark:text-white dark:bg-buttonBg dark:placeholder-white;
 }
 
-
-.file-input-label {
-    @apply flex items-center justify-center p-1 px-6 text-center bg-white text-black
-    hover:border-[var(--color-lightPurple)] hover:text-gray hover:shadow-[0_0_20px_var(--color-lightPurple)]
-    dark:text-white dark:hover:text-white dark:bg-[var(--color-buttonBg)]
-    active:text-[var(--color-purple)] active:shadow-none active:border-[var(--color-purple)];
-}
 .otp-input {
-    @apply w-[60px] h-[60px] border-2 border-[var(--color-purple)] rounded-lg text-center text-xl font-semibold
+    @apply w-[60px] h-[60px] border-2 border-purple rounded-lg text-center text-xl font-semibold
     text-black focus:shadow-[0_0_20px_var(--color-purple)] focus:outline-none
     dark:text-white hover:shadow-[0_0_20px_var(--color-purple)] dark:hover:shadow-[0_0_20px_var(--color-lightPurple)];
 
@@ -67,3 +64,4 @@ body{
 .checkbox-input{
     @apply w-[24px] h-[24px] appearance-none relative bg-white rounded-[5px] border border-purple
 }
+
