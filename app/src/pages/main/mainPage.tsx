@@ -14,7 +14,7 @@ const MainPage = (): ReactNode => {
             </header>
 
             <ThemeSwitcher />
-
+            <CustomSelect className="w-[248px]" defaultOption={'Права'} options={["Просмотр", "Полный доступ"]}  />
             <section className="space-y-6">
                 <h2 className="text-lg font-medium text-gray-800 dark:text-white">Акции</h2>
                 <div className="flex flex-col items-center gap-4">
@@ -28,9 +28,7 @@ const MainPage = (): ReactNode => {
             </section>
 
             <section className="space-y-6">
-                <div className="mb-4">
-                    <CustomSelect className="w-[300px]" defaultOption={'Права'} options={["Просмотр", "Полный доступ"]}  />
-                </div>
+
 
                 <div className="space-y-4">
                     <Input variant={EInputVariant.BASE} className="w-[474px]" type='text' placeholder='E-mail*' />
@@ -54,6 +52,7 @@ const MainPage = (): ReactNode => {
                 </div>
                 <div className="space-y-4">
                     <CustomDatePicker className="w-[200px]" />
+
                 </div>
             </section>
         </main>

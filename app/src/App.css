@@ -2,7 +2,7 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-body{
+body {
     min-width: 1920px;
     min-height: 1280px;
     background-color: #ffffff;
@@ -22,6 +22,7 @@ body{
 [data-theme="dark"] body {
     background-color: #230E36;
 }
+
 @layer base {
 
     input[type="number"]::-webkit-inner-spin-button,
@@ -29,13 +30,17 @@ body{
         -webkit-appearance: none;
         margin: 0;
     }
+
+    ::-webkit-search-cancel-button {
+        display: none;
+    }
 }
 
 .btn, .input, .btn-with-icon {
     @apply cursor-pointer border rounded-[20px] transition-all duration-200 outline-none;
 }
 
-.btn{
+.btn {
     @apply h-[52px] border-2 text-center items-center justify-center bg-white text-black border-purple
     hover:border-lightPurple hover:text-gray hover:shadow-[0_0_20px_var(--color-lightPurple)]
     dark:text-white dark:hover:text-white dark:bg-buttonBg dark:active:text-purple dark:hover:border-purple
@@ -46,16 +51,19 @@ body{
     @apply text-purple hover:drop-shadow-[0_0_5px_var(--color-purple)]
     dark:text-lightPurple dark:hover:text-purple dark:hover:drop-shadow-[0_0_5px_var(--color-purple)];
 }
-.btn-with-icon{
+
+.btn-with-icon {
     @apply h-[52px] px-[27px] justify-between flex items-center bg-white border-2 border-purple dark:bg-buttonBg
     dark:text-white hover:shadow-[0_0_20px_var(--color-lightPurple)] focus:shadow-[0_0_20px_var(--color-lightPurple)]
     hover:text-purple dark:hover:text-purple
 }
+
 .input-icon {
-    @apply cursor-pointer absolute top-0 end-4 h-full flex items-center text-lightPurple dark:text-white;
+    @apply cursor-pointer absolute top-0 right-4 h-full flex items-center text-lightPurple dark:text-white;
 }
-.input{
-    @apply h-[54px] px-[27px] bg-white placeholder-black border-purple
+
+.input {
+    @apply h-[54px] pl-[27px] bg-white placeholder-black border-purple
     hover:shadow-[0_0_20px_var(--color-lightPurple)] focus:shadow-none outline-none focus:placeholder-transparent
     dark:text-white dark:bg-buttonBg dark:placeholder-white;
 }
@@ -67,14 +75,31 @@ body{
 
 }
 
-.checkbox-input{
+.checkbox-input {
     @apply w-[24px] h-[24px] appearance-none relative bg-white rounded-[5px] border border-purple
 }
 
-.input-checkbox{
+.input-checkbox {
     @apply flex items-center justify-center rounded-[5px] border border-purple cursor-pointer transition-all min-w-[20px] min-h-[20px]
 }
 
-.input-checkbox-checked{
+.input-checkbox-checked {
     @apply bg-purple dark:bg-buttonBg shadow-[0_0_20px_var(--color-purple)]
+}
+
+
+.custom-select-box {
+    @apply flex items-center justify-between h-[52px] px-[27px] rounded-[20px]
+    border-2 border-purple dark:bg-buttonBg text-[var(--color-purple)]
+    cursor-pointer select-none transition-shadow min-w-max;
+}
+
+.custom-select-option {
+    @apply absolute left-0 bg-white dark:bg-darkPurple overflow-hidden
+    shadow-[0_0_5px_var(--color-purple)] min-w-[350px] mt-2 rounded-[20px] border-2 border-purple;
+}
+
+.custom-option {
+    @apply mx-[27px] py-2 text-black dark:text-white cursor-pointer
+    hover:text-purple dark:hover:text-purple whitespace-nowrap;
 }

@@ -45,7 +45,7 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = fal
                     {...props}
                     type="search"
                     placeholder={placeholder}
-                    className={`${inputStyles[variant]} ${className} pr-10`}
+                    className={`${inputStyles[variant]} ${className} pr-[48px]`}
                 />
                 <button
                     type="submit"
@@ -70,7 +70,7 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = fal
                 <input
                     {...props}
                     type={showPassword ? "text" : "password"}
-                    className={`${inputStyles[variant]} ${className} pr-10`}
+                    className={`${inputStyles[variant]} ${className} pr-[48px]`}
                     placeholder={placeholder}
                 />
                 <button
@@ -83,7 +83,7 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = fal
             </div>
         );
     }
-    return <input {...props} type={type} className={`${inputStyles[variant]} ${className}`}
+    return <input {...props} type={type} className={`${inputStyles[variant]} ${className} pr-[27px]`}
                   placeholder={placeholder}/>;
 
 

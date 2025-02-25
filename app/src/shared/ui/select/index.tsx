@@ -1,24 +1,41 @@
-import { FC } from "react";
-import { Select, Option } from "@material-tailwind/react";
+import { FC, useState } from "react";
+import { Icon } from "@iconify/react";
 
 interface ISelectProps {
     options: string[];
     className?: string;
     defaultOption?: string;
 }
+const CustomSelect: FC<ISelectProps> = ({ defaultOption, options, className }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [selected, setSelected] = useState(defaultOption);
 
-const selectStyle =
-    "w-fit px-4 py-2 text-purple bg-buttonBg ring-2 border-purple rounded-[20px] appearance-none cursor-pointer focus:outline-none focus:shadow-[0_0_20px_var(--color-purple)]";
-
-const CustomSelect: FC<ISelectProps> = ({ defaultOption, options, className, ...props }) => {
     return (
-        <Select {...props} className={`${selectStyle} ${className || ""}`} label={defaultOption}>
-            {options.map((option, index) => (
-                <Option key={index} value={option} className="text-black">
-                    {option}
-                </Option>
-            ))}
-        </Select>
+        <div className={`relative ${className}`}>
+            <div
+                className={`custom-select-box ${isOpen ? "shadow-[0_0_5px_var(--color-purple)]" : ""}`}
+                onClick={() => setIsOpen(!isOpen)}>
+                {selected}
+                <Icon icon="ep:arrow-down"
+                    className={`text-purple transition-transform ${isOpen ? "rotate-180" : ""}`}/>
+            </div>
+
+            {isOpen && (
+                <ul className={`custom-select-option`}>
+                    {options.map((option, index) => (
+                        <li
+                            key={index}
+                            className={`custom-option ${index !== 0 ? "border-t-2 border-lightPurple" : ""}`}
+                            onClick={() => {
+                                setSelected(option);
+                                setIsOpen(false);
+                            }}>
+                            {option}
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
     );
 };
 

@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment=".......">
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="да">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/shared/ui/select/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/select/index.tsx" afterDir="false" />
     </list>
@@ -112,7 +108,8 @@
       <workItem from="1740312123717" duration="16336000" />
       <workItem from="1740372648708" duration="40975000" />
       <workItem from="1740454100416" duration="11304000" />
-      <workItem from="1740469787868" duration="11647000" />
+      <workItem from="1740469787868" duration="13746000" />
+      <workItem from="1740488412566" duration="10845000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -154,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740465639938</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="да">
+      <option name="closed" value="true" />
+      <created>1740482823918</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740482823918</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +171,7 @@
     <MESSAGE value="Инпуты...." />
     <MESSAGE value="...." />
     <MESSAGE value="......." />
-    <option name="LAST_COMMIT_MESSAGE" value="......." />
+    <MESSAGE value="да" />
+    <option name="LAST_COMMIT_MESSAGE" value="да" />
   </component>
 </project>
