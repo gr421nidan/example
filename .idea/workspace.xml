@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="да">
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="исправила инпут и переделала селект">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/select/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/select/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
       <workItem from="1740372648708" duration="40975000" />
       <workItem from="1740454100416" duration="11304000" />
       <workItem from="1740469787868" duration="13746000" />
-      <workItem from="1740488412566" duration="10845000" />
+      <workItem from="1740488412566" duration="16478000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -159,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740482823918</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="исправила инпут и переделала селект">
+      <option name="closed" value="true" />
+      <created>1740499533947</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740499533947</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +179,7 @@
     <MESSAGE value="...." />
     <MESSAGE value="......." />
     <MESSAGE value="да" />
-    <option name="LAST_COMMIT_MESSAGE" value="да" />
+    <MESSAGE value="исправила инпут и переделала селект" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправила инпут и переделала селект" />
   </component>
 </project>

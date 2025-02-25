@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwindcss" important;
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
@@ -34,6 +35,11 @@ body {
     ::-webkit-search-cancel-button {
         display: none;
     }
+
+    input[type="password"]::-ms-reveal,
+    input[type="password"]::-ms-clear {
+        @apply hidden;
+    }
 }
 
 .btn, .input, .btn-with-icon {
@@ -48,7 +54,7 @@ body {
 }
 
 .btn-icon {
-    @apply text-purple hover:drop-shadow-[0_0_5px_var(--color-purple)]
+    @apply cursor-pointer text-purple hover:drop-shadow-[0_0_5px_var(--color-purple)]
     dark:text-lightPurple dark:hover:text-purple dark:hover:drop-shadow-[0_0_5px_var(--color-purple)];
 }
 
@@ -102,4 +108,21 @@ body {
 .custom-option {
     @apply mx-[27px] py-2 text-black dark:text-white cursor-pointer
     hover:text-purple dark:hover:text-purple whitespace-nowrap;
+}
+
+.custom-calendar-datepicker, .react-datepicker__header  {
+    @apply bg-white dark:bg-darkPurple  shadow-[0_0_20px_var(--color-purple)]
+}
+.react-datepicker__current-month{
+    @apply text-black dark:text-white
+}
+.custom-calendar-datepicker__day {
+    @apply text-black dark:text-white hover:bg-purple hover:text-white transition
+}
+
+.custom-calendar-datepicker__week {
+    @apply text-purple text-lg hover:bg-purple hover:text-white rounded-lg transition
+}
+.react-datepicker__day--selected{
+    @apply bg-purple text-white
 }

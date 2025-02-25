@@ -28,6 +28,7 @@ const inputStyles: Record<EInputVariant, string> = {
 
 const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = false, className = "", ...props}) => {
     const [showPassword, setShowPassword] = useState(false);
+    const [inputValue, setInputValue] = useState("");
     const [isChecked, setIsChecked] = useState(checked);
     if (variant === EInputVariant.CHECKBOX) {
         return (
@@ -70,16 +71,20 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = fal
                 <input
                     {...props}
                     type={showPassword ? "text" : "password"}
-                    className={`${inputStyles[variant]} ${className} pr-[48px]`}
+                    className={`${inputStyles[variant]} ${className} pr-[50px]`}
                     placeholder={placeholder}
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
                 />
-                <button
-                    type="button"
-                    className="input-icon"
-                    onClick={() => setShowPassword((prev) => !prev)}
-                >
-                    <Icon icon={showPassword ? "mage:eye" : "iconamoon:eye-off-thin"} className="w-[30px] h-[30px]"/>
-                </button>
+                {inputValue && (
+                    <button
+                        type="button"
+                        className="input-icon pr-[10px]"
+                        onClick={() => setShowPassword((prev) => !prev)}
+                    >
+                        <Icon icon={showPassword ? "iconamoon:eye-thin" : "iconamoon:eye-off-thin"} className="text-black dark:text-white w-[20px] h-[20px]"/>
+                    </button>
+                )}
             </div>
         );
     }
