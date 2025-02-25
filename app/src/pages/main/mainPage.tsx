@@ -4,6 +4,7 @@ import Button, { EButtonVariant } from "@/shared/ui/buttons";
 import Select from "@/shared/ui/select";
 import Input, { EInputVariant } from "@/shared/ui/inputs/input.tsx";
 import OtpCodeInput from "@/shared/ui/inputs/otpInput.tsx";
+import CustomDatePicker from "@/shared/ui/date";
 
 const MainPage = (): ReactNode => {
     return (
@@ -33,7 +34,7 @@ const MainPage = (): ReactNode => {
 
                 <div className="space-y-4">
                     <Input variant={EInputVariant.BASE} className="w-[474px]" type='text' placeholder='E-mail*' />
-                    <Input variant={EInputVariant.CHECKBOX} type='checkbox' className="h-6 w-6" />
+                    <Input variant={EInputVariant.CHECKBOX} type='checkbox' className="h-[24px] w-[24px]" />
                     <Input variant={EInputVariant.FILE_INPUT} type='file' placeholder='Загрузить'  />
                 </div>
 
@@ -50,6 +51,9 @@ const MainPage = (): ReactNode => {
                 </div>
                 <div className="space-y-4">
                     <Input variant={EInputVariant.DATE} className="w-[170px]" />
+                </div>
+                <div className="space-y-4">
+                    <CustomDatePicker  />
                 </div>
             </section>
         </main>

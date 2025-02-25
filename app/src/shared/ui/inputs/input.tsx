@@ -1,4 +1,4 @@
-import {FC, InputHTMLAttributes, useState} from "react";
+import { FC, InputHTMLAttributes, useState } from "react";
 import {Icon} from "@iconify/react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -18,19 +18,21 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     variant: EInputVariant;
     type?: string;
     icon?: string;
+    checked?: boolean;
 }
 
 const inputStyles: Record<EInputVariant, string> = {
     [EInputVariant.BASE]: "input",
     [EInputVariant.SEARCH]: "input",
-    [EInputVariant.CHECKBOX]: "hidden peer",
+    [EInputVariant.CHECKBOX]: "input-checkbox",
     [EInputVariant.FILE_INPUT]: "btn",
     [EInputVariant.PASSWORD]: "input block",
     [EInputVariant.DATE]: "btn placeholder:text-purple",
 };
 
-const Input: FC<IInputProps> = ({variant, placeholder, icon, type, className = "", ...props}) => {
+const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = false, className = "", ...props}) => {
     const [showPassword, setShowPassword] = useState(false);
+    const [isChecked, setIsChecked] = useState(checked);
     const [startDate, setStartDate] = useState<Date | null>(new Date());
     if (variant === EInputVariant.DATE) {
         return (
@@ -45,17 +47,11 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, className = "
     }
     if (variant === EInputVariant.CHECKBOX) {
         return (
-            <label className="relative flex items-center cursor-pointer">
-                <input {...props} type="checkbox" className={inputStyles[variant]}/>
-                <div
-                    className="w-6 h-6 border-2 border-purple rounded-md flex items-center justify-center transition-all peer-checked:bg-purple">
-
-                    <Icon
-                        icon="mdi:check"
-                        className="w-4 h-4 text-white opacity-0 transition-opacity peer-checked:opacity-100 peer-checked:block"
-                    />
-                </div>
-            </label>
+            <div
+                className={`${inputStyles[variant]} ${isChecked ? "input-checkbox-checked" : ""} ${className}`}
+                onClick={() => setIsChecked((prev) => !prev)}>
+                {isChecked && <Icon icon="uil:check" className="text-white min-w-6 min-h-6" />}
+            </div>
         );
     }
     if (variant === EInputVariant.SEARCH) {
@@ -69,7 +65,7 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, className = "
                 />
                 <button
                     type="submit"
-                    className="input_icon"
+                    className="input-icon"
                 >
                     <Icon icon="bi:search" className="w-[29px] h-[28px]"/>
                 </button>
@@ -95,7 +91,7 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, className = "
                 />
                 <button
                     type="button"
-                    className="input_icon"
+                    className="input-icon"
                     onClick={() => setShowPassword((prev) => !prev)}
                 >
                     <Icon icon={showPassword ? "mage:eye" : "iconamoon:eye-off-thin"} className="w-[30px] h-[30px]"/>

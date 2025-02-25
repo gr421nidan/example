@@ -30,6 +30,7 @@ body{
         margin: 0;
     }
 }
+
 .btn, .input {
     @apply cursor-pointer border rounded-[20px] transition-all duration-200 outline-none;
 }
@@ -45,7 +46,7 @@ body{
     @apply text-purple hover:drop-shadow-[0_0_5px_var(--color-purple)]
     dark:text-lightPurple dark:hover:text-purple dark:hover:drop-shadow-[0_0_5px_var(--color-purple)];
 }
-.input_icon {
+.input-icon {
     @apply cursor-pointer absolute top-0 end-4 h-full flex items-center text-lightPurple dark:text-white;
 }
 .input {
@@ -65,3 +66,10 @@ body{
     @apply w-[24px] h-[24px] appearance-none relative bg-white rounded-[5px] border border-purple
 }
 
+.input-checkbox{
+    @apply flex items-center justify-center rounded-[5px] border border-purple cursor-pointer transition-all min-w-[20px] min-h-[20px]
+}
+
+.input-checkbox-checked{
+    @apply bg-purple dark:bg-buttonBg shadow-[0_0_20px_var(--color-purple)]
+}

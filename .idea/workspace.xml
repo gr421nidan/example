@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="Инпуты и селект">
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/otpInput.tsx" afterDir="false" />
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="....">
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/select/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/select/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/79234/WebstormProjects/example/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/79234/WebstormProjects/example/app/src/shared/ui/inputs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
@@ -76,6 +75,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\79234\WebstormProjects\example\app\src\shared\ui\inputs" />
       <recent name="C:\Users\79234\WebstormProjects\example\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -109,7 +109,8 @@
       <workItem from="1740162279444" duration="2560000" />
       <workItem from="1740212706040" duration="206000" />
       <workItem from="1740312123717" duration="16336000" />
-      <workItem from="1740372648708" duration="25185000" />
+      <workItem from="1740372648708" duration="40975000" />
+      <workItem from="1740454100416" duration="11066000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -127,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740332347683</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Инпуты....">
+      <option name="closed" value="true" />
+      <created>1740403598611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740403598611</updated>
+    </task>
+    <task id="LOCAL-00004" summary="....">
+      <option name="closed" value="true" />
+      <created>1740422132698</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740422132698</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +153,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Тема и кнопки" />
     <MESSAGE value="Инпуты и селект" />
-    <option name="LAST_COMMIT_MESSAGE" value="Инпуты и селект" />
+    <MESSAGE value="Инпуты...." />
+    <MESSAGE value="...." />
+    <option name="LAST_COMMIT_MESSAGE" value="...." />
   </component>
 </project>
