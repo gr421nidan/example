@@ -3,11 +3,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { ru } from "date-fns/locale";
 
-interface CustomDatePickerProps {
+interface ICustomDatePickerProps {
     className?: string;
 }
 
-const CustomDatePicker: FC<CustomDatePickerProps> = ({ className = "" }) => {
+const CustomDatePicker: FC<ICustomDatePickerProps> = ({ className = "" }) => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
     return (
@@ -15,7 +15,7 @@ const CustomDatePicker: FC<CustomDatePickerProps> = ({ className = "" }) => {
             <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)}
                         dateFormat="dd.MM.yyyy"
                         locale={ru}
-                        className={`btn ${className} `}
+                        className={`btn ${className}`}
                         placeholderText="дд.мм.гггг"
                         calendarClassName="custom-calendar-datepicker"
                         dayClassName={() => "custom-calendar-datepicker__day"}
