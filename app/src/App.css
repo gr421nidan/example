@@ -31,11 +31,11 @@ body{
     }
 }
 
-.btn, .input {
+.btn, .input, .btn-with-icon {
     @apply cursor-pointer border rounded-[20px] transition-all duration-200 outline-none;
 }
 
-.btn {
+.btn{
     @apply h-[52px] border-2 text-center items-center justify-center bg-white text-black border-purple
     hover:border-lightPurple hover:text-gray hover:shadow-[0_0_20px_var(--color-lightPurple)]
     dark:text-white dark:hover:text-white dark:bg-buttonBg dark:active:text-purple dark:hover:border-purple
@@ -46,10 +46,15 @@ body{
     @apply text-purple hover:drop-shadow-[0_0_5px_var(--color-purple)]
     dark:text-lightPurple dark:hover:text-purple dark:hover:drop-shadow-[0_0_5px_var(--color-purple)];
 }
+.btn-with-icon{
+    @apply h-[52px] px-[27px] justify-between flex items-center bg-white border-2 border-purple dark:bg-buttonBg
+    dark:text-white hover:shadow-[0_0_20px_var(--color-lightPurple)] focus:shadow-[0_0_20px_var(--color-lightPurple)]
+    hover:text-purple dark:hover:text-purple
+}
 .input-icon {
     @apply cursor-pointer absolute top-0 end-4 h-full flex items-center text-lightPurple dark:text-white;
 }
-.input {
+.input{
     @apply h-[54px] px-[27px] bg-white placeholder-black border-purple
     hover:shadow-[0_0_20px_var(--color-lightPurple)] focus:shadow-none outline-none focus:placeholder-transparent
     dark:text-white dark:bg-buttonBg dark:placeholder-white;

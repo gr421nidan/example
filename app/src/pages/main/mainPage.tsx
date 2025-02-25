@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 import ThemeSwitcher from "@/shared/ui/theme";
 import Button, { EButtonVariant } from "@/shared/ui/buttons";
-import Select from "@/shared/ui/select";
 import Input, { EInputVariant } from "@/shared/ui/inputs/input.tsx";
 import OtpCodeInput from "@/shared/ui/inputs/otpInput.tsx";
 import CustomDatePicker from "@/shared/ui/date";
+import CustomSelect from "@/shared/ui/select";
 
 const MainPage = (): ReactNode => {
     return (
@@ -29,13 +29,13 @@ const MainPage = (): ReactNode => {
 
             <section className="space-y-6">
                 <div className="mb-4">
-                    <Select defaultOption={'Права'} options={["Просмотр", "Полный доступ"]} className="w-[474px]" />
+                    <CustomSelect className="w-[300px]" defaultOption={'Права'} options={["Просмотр", "Полный доступ"]}  />
                 </div>
 
                 <div className="space-y-4">
                     <Input variant={EInputVariant.BASE} className="w-[474px]" type='text' placeholder='E-mail*' />
                     <Input variant={EInputVariant.CHECKBOX} type='checkbox' className="h-[24px] w-[24px]" />
-                    <Input variant={EInputVariant.FILE_INPUT} type='file' placeholder='Загрузить'  />
+                    <Input variant={EInputVariant.FILE_INPUT} type='file' className="w-[318px]" placeholder='Загрузить'  />
                 </div>
 
                 <div>
@@ -50,10 +50,10 @@ const MainPage = (): ReactNode => {
                     <Input variant={EInputVariant.PASSWORD} className="w-[474px]" placeholder='Пароль*' />
                 </div>
                 <div className="space-y-4">
-                    <Input variant={EInputVariant.DATE} className="w-[170px]" />
+                    <Button variant={EButtonVariant.WITH_ICON} icon={"ep:arrow-down"} className="w-[248px]" label="Фильтрация"  />
                 </div>
                 <div className="space-y-4">
-                    <CustomDatePicker  />
+                    <CustomDatePicker className="w-[200px]" />
                 </div>
             </section>
         </main>

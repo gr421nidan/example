@@ -1,8 +1,5 @@
 import { FC, InputHTMLAttributes, useState } from "react";
 import {Icon} from "@iconify/react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import {ru} from "date-fns/locale";
 
 export enum EInputVariant {
     BASE = "base",
@@ -10,7 +7,7 @@ export enum EInputVariant {
     CHECKBOX = "checkbox",
     FILE_INPUT = "file-input",
     PASSWORD = "password",
-    DATE = "date",
+
 }
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -25,26 +22,13 @@ const inputStyles: Record<EInputVariant, string> = {
     [EInputVariant.BASE]: "input",
     [EInputVariant.SEARCH]: "input",
     [EInputVariant.CHECKBOX]: "input-checkbox",
-    [EInputVariant.FILE_INPUT]: "btn",
+    [EInputVariant.FILE_INPUT]: "btn block flex",
     [EInputVariant.PASSWORD]: "input block",
-    [EInputVariant.DATE]: "btn placeholder:text-purple",
 };
 
 const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = false, className = "", ...props}) => {
     const [showPassword, setShowPassword] = useState(false);
     const [isChecked, setIsChecked] = useState(checked);
-    const [startDate, setStartDate] = useState<Date | null>(new Date());
-    if (variant === EInputVariant.DATE) {
-        return (
-            <div className="relative w-fit">
-                <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}
-                            dateFormat="dd.MM.yyyy"
-                            locale={ru}
-                            className={`${inputStyles[variant]} ${className} `}
-                            placeholderText="дд.мм.гггг"/>
-            </div>
-        );
-    }
     if (variant === EInputVariant.CHECKBOX) {
         return (
             <div
