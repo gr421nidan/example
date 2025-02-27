@@ -5,10 +5,12 @@ import Input, { EInputVariant } from "@/shared/ui/inputs/input.tsx";
 import OtpCodeInput from "@/shared/ui/inputs/otpInput.tsx";
 import CustomDatePicker from "@/shared/ui/date";
 import CustomSelect from "@/shared/ui/select";
+import SignUpForm from "@/features/auth/sign-up-form/ui";
+import SignInForm from "@/features/auth/sign-in-form/ui";
 
 const MainPage = (): ReactNode => {
     return (
-        <main className="p-6 max-w-3xl mx-auto space-y-6">
+        <main className="p-6 max-w-3xl mx-auto space-y-6 ">
             <header className="text-center p-6 bg-amber-200 dark:bg-amber-700 rounded-xl shadow-md">
                 <h1 className="text-2xl font-semibold text-gray-700 dark:text-white">Главная страница</h1>
             </header>
@@ -23,7 +25,7 @@ const MainPage = (): ReactNode => {
                 </div>
 
                 <div className="grid grid-cols-10 gap-4">
-                    <Button variant={EButtonVariant.ICON} icon={"ci:trash-full"} />
+                    <Button variant={EButtonVariant.ICON} icon={"ci:trash-full"} className="w-[40px] h-[40px]"/>
                 </div>
             </section>
 
@@ -32,7 +34,8 @@ const MainPage = (): ReactNode => {
 
                 <div className="space-y-4">
                     <Input variant={EInputVariant.BASE} className="w-[474px]" type='text' placeholder='E-mail*' />
-                    <Input variant={EInputVariant.CHECKBOX} type='checkbox' className="h-[24px] w-[24px]" />
+                    <Input variant={EInputVariant.CHECKBOX}  className="h-[24px] w-[24px]" />
+                    <Input variant={EInputVariant.RADIO} className="h-[24px] w-[24px]" />
                     <Input variant={EInputVariant.FILE_INPUT} type='file' className="w-[318px]" placeholder='Загрузить'  />
                 </div>
 
@@ -48,12 +51,18 @@ const MainPage = (): ReactNode => {
                     <Input variant={EInputVariant.PASSWORD} className="w-[474px]" placeholder='Пароль*' />
                 </div>
                 <div className="space-y-4">
-                    <Button variant={EButtonVariant.WITH_ICON} icon={"ep:arrow-down"} className="w-[248px]" label="Фильтрация"  />
+                    <Button variant={EButtonVariant.WITH_ICON} icon={"ep:arrow-down"} className="w-[300px]" label="Фильтрация"  />
                 </div>
                 <div className="space-y-4">
-                    <CustomDatePicker className="w-[200px]" />
+                    <CustomDatePicker className="w-[400px]" />
 
                 </div>
+            </section>
+            <section>
+                <SignUpForm/>
+            </section>
+            <section>
+                <SignInForm/>
             </section>
         </main>
     );

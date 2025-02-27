@@ -4,9 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="исправила инпут и доделала кастом даты">
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/app/src/assets/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-in/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-in/model/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-in/type/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-up/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-up/model/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-up/type/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/model/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/model/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/features/theme-switcher/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/config/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/utils/cn/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -106,7 +128,8 @@
       <workItem from="1740372648708" duration="40975000" />
       <workItem from="1740454100416" duration="11304000" />
       <workItem from="1740469787868" duration="13746000" />
-      <workItem from="1740488412566" duration="16790000" />
+      <workItem from="1740488412566" duration="17180000" />
+      <workItem from="1740623034112" duration="30910000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -172,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740505230335</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=".">
+      <option name="closed" value="true" />
+      <created>1740505733197</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740505733197</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +218,7 @@
     <MESSAGE value="да" />
     <MESSAGE value="исправила инпут и переделала селект" />
     <MESSAGE value="исправила инпут и доделала кастом даты" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправила инпут и доделала кастом даты" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, useState } from "react";
+import {FC, InputHTMLAttributes, useState} from "react";
 import {Icon} from "@iconify/react";
 
 export enum EInputVariant {
@@ -7,15 +7,14 @@ export enum EInputVariant {
     CHECKBOX = "checkbox",
     FILE_INPUT = "file-input",
     PASSWORD = "password",
+    RADIO = "radio",
 
 }
 
 interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     placeholder?: string;
     variant: EInputVariant;
-    type?: string;
     icon?: string;
-    checked?: boolean;
 }
 
 const inputStyles: Record<EInputVariant, string> = {
@@ -24,21 +23,32 @@ const inputStyles: Record<EInputVariant, string> = {
     [EInputVariant.CHECKBOX]: "input-checkbox",
     [EInputVariant.FILE_INPUT]: "btn block flex",
     [EInputVariant.PASSWORD]: "input block",
+    [EInputVariant.RADIO]: "input-checkbox",
 };
-
-const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = false, className = "", ...props}) => {
+const Input: FC<IInputProps> = ({variant, placeholder, icon,type, checked = false, className = "", ...props}) => {
     const [showPassword, setShowPassword] = useState(false);
-    const [inputValue, setInputValue] = useState("");
     const [isChecked, setIsChecked] = useState(checked);
     if (variant === EInputVariant.CHECKBOX) {
         return (
             <div
                 className={`${inputStyles[variant]} ${isChecked ? "input-checkbox-checked" : ""} ${className}`}
                 onClick={() => setIsChecked((prev) => !prev)}>
-                {isChecked && <Icon icon="uil:check" className="text-white min-w-6 min-h-6" />}
+                <input {...props} type="checkbox" className="hidden"/>
+                {isChecked && <Icon icon="uil:check" className="text-white" />}
             </div>
         );
     }
+    if (variant === EInputVariant.RADIO) {
+        return (
+            <div
+                className={`${inputStyles[variant]} ${isChecked ? "input-checkbox-checked" : ""} ${className}`}
+                onClick={() => setIsChecked((prev) => !prev)}>
+                <input {...props} type="radio" className="opacity-0"/>
+                {isChecked && <Icon icon="uil:check" className="text-white" />}
+            </div>
+        );
+    }
+
     if (variant === EInputVariant.SEARCH) {
         return (
             <div className="relative w-fit">
@@ -73,18 +83,14 @@ const Input: FC<IInputProps> = ({variant, placeholder, icon, type, checked = fal
                     type={showPassword ? "text" : "password"}
                     className={`${inputStyles[variant]} ${className} pr-[50px]`}
                     placeholder={placeholder}
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
                 />
-                {inputValue && (
-                    <button
-                        type="button"
-                        className="input-icon pr-[10px]"
-                        onClick={() => setShowPassword((prev) => !prev)}
-                    >
-                        <Icon icon={showPassword ? "iconamoon:eye-thin" : "iconamoon:eye-off-thin"} className="text-black dark:text-white w-[20px] h-[20px]"/>
-                    </button>
-                )}
+                <button
+                    type="button"
+                    className="input-icon pr-[10px]"
+                    onClick={() => setShowPassword((prev) => !prev)}
+                >
+                    <Icon icon={showPassword ? "iconamoon:eye-thin" : "iconamoon:eye-off-thin"} className="text-black dark:text-white w-[20px] h-[20px]" />
+                </button>
             </div>
         );
     }

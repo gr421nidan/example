@@ -27,11 +27,11 @@ const Button: FC<IButtonProps> = ({ variant, label, icon, type = "button", class
             className={`${buttonStyles[variant]} ${className}`}
         >
             {variant === EButtonVariant.ICON && icon ? (
-                <Icon icon={icon} />
+                <Icon icon={icon} className={className} />
             ) : variant === EButtonVariant.WITH_ICON && icon ? (
                 <>
                     {label && <span>{label}</span>}
-                    <Icon icon={icon} className="pr-2" />
+                    <Icon icon={icon} className="pr-2 w-fit" />
                 </>
             ) : (
                 label && <span>{label}</span>
