@@ -8,7 +8,6 @@ import SignUpForm from "@/features/auth/sign-up-form/ui";
 import SignInForm from "@/features/auth/sign-in-form/ui";
 import Input from "@/shared/ui/inputs/base-input";
 import PasswordInput from "@/shared/ui/inputs/password-input";
-import CheckboxInput from "@/shared/ui/inputs/checkbox-radio-input";
 import FileInput from "@/shared/ui/inputs/file-input";
 
 const MainPage = (): ReactNode => {
@@ -35,27 +34,6 @@ const MainPage = (): ReactNode => {
             </section>
 
             <section className="space-y-6">
-
-
-                {/*<div className="space-y-4">*/}
-                {/*    <Input variant={EInputVariant.BASE} className="w-[474px]" type='text' placeholder='E-mail*' />*/}
-                {/*    <Input variant={EInputVariant.CHECKBOX}  className="h-[24px] w-[24px]" />*/}
-                {/*    <Input variant={EInputVariant.RADIO} className="h-[24px] w-[24px]" />*/}
-                {/*    <Input variant={EInputVariant.FILE_INPUT} type='file' className="w-[318px]" placeholder='Загрузить'  />*/}
-                {/*</div>*/}
-
-                {/*<div>*/}
-                {/*    <OtpCodeInput numInputs={6} inputMode="numeric" className="space-x-2" />*/}
-                {/*</div>*/}
-
-
-                {/*<div className="space-y-4">*/}
-                {/*    <Input variant={EInputVariant.SEARCH} className="w-[300px]" placeholder='Поиск' />*/}
-                {/*</div>*/}
-
-                {/*<div className="space-y-4">*/}
-                {/*    <Input variant={EInputVariant.PASSWORD} className="w-[474px]" placeholder='Пароль*' />*/}
-                {/*</div>*/}
                 <div className="space-y-4">
                     <Button variant={EButtonVariant.WITH_ICON} icon={"ep:arrow-down"} className="w-[300px]"
                             label="Фильтрация"/>
@@ -79,8 +57,7 @@ const MainPage = (): ReactNode => {
                     <Input type="search" placeholder="Поиск*" className="w-[770px] h-[63px]"/>
                     <Input type="email" placeholder="Email*" className="w-[474px]"/>
                     <PasswordInput placeholder="Пароль" className="w-[474px]"/>
-                    <CheckboxInput type="checkbox" className="w-[20px] h-[20px]"/>
-                    <CheckboxInput type="radio" className="w-[20px] h-[20px]"/>
+
                     <FileInput placeholder="Загрузить"/>
 
 

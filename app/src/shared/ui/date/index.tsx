@@ -26,9 +26,9 @@ const CustomDatePicker: FC<ICustomDatePickerProps> = ({ className = "" }) => {
                 locale={ru}
                 className={cn(datePickerContainer(), className)}
                 placeholderText="дд.мм.гггг"
-                calendarClassName={cn(datePickerCalendar())} // Календарь
-                dayClassName={() => cn(datePickerDay())} // Дни
-                weekDayClassName={() => cn(datePickerWeekDay())} // Дни недели
+                calendarClassName={cn(datePickerCalendar())}
+                dayClassName={() => cn(datePickerDay())}
+                weekDayClassName={() => cn(datePickerWeekDay())}
             />
         </div>
     );

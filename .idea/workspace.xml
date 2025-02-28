@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="пупупу">
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="даа">
+      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/validations/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/features/auth/style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -73,10 +79,11 @@
       <recent name="C:\Users\79234\WebstormProjects\example\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79234\WebstormProjects\example\app\src\features\auth" />
+      <recent name="C:\Users\79234\WebstormProjects\example\app\src\entities\auth" />
       <recent name="C:\Users\79234\WebstormProjects\example\app\src\shared\ui\date" />
       <recent name="C:\Users\79234\WebstormProjects\example\app\public\assets" />
       <recent name="C:\Users\79234\WebstormProjects\example\app\public" />
-      <recent name="C:\Users\79234\WebstormProjects\example\app\src\assets" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -109,7 +116,7 @@
       <workItem from="1740469787868" duration="13746000" />
       <workItem from="1740488412566" duration="17180000" />
       <workItem from="1740623034112" duration="40305000" />
-      <workItem from="1740713758831" duration="20589000" />
+      <workItem from="1740713758831" duration="27768000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -199,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740734745349</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="даа">
+      <option name="closed" value="true" />
+      <created>1740735875067</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740735875068</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +232,7 @@
     <MESSAGE value="." />
     <MESSAGE value="..." />
     <MESSAGE value="пупупу" />
-    <option name="LAST_COMMIT_MESSAGE" value="пупупу" />
+    <MESSAGE value="даа" />
+    <option name="LAST_COMMIT_MESSAGE" value="даа" />
   </component>
 </project>
