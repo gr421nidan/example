@@ -4,31 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/app/src/assets/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-in/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-in/model/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-in/type/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-up/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-up/model/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/sign-up/type/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/model/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/model/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/features/theme-switcher/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/config/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/utils/cn/index.ts" afterDir="false" />
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="...">
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/date/style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/base-input/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/file-input/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/otp-input/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/password-input/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/model/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/model/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/buttons/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/otpInput.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -69,32 +61,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/79234/WebstormProjects/example/app/src/shared/ui/inputs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.stylesheets.stylelint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\79234\\WebstormProjects\\example\\app\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/79234/WebstormProjects/example",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
+    "ts.external.directory.path": "C:\\Users\\79234\\WebstormProjects\\example\\app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\79234\WebstormProjects\example\app\src\shared\ui\inputs" />
       <recent name="C:\Users\79234\WebstormProjects\example\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79234\WebstormProjects\example\app\src\shared\ui\date" />
       <recent name="C:\Users\79234\WebstormProjects\example\app\public\assets" />
       <recent name="C:\Users\79234\WebstormProjects\example\app\public" />
       <recent name="C:\Users\79234\WebstormProjects\example\app\src\assets" />
@@ -129,7 +122,8 @@
       <workItem from="1740454100416" duration="11304000" />
       <workItem from="1740469787868" duration="13746000" />
       <workItem from="1740488412566" duration="17180000" />
-      <workItem from="1740623034112" duration="30910000" />
+      <workItem from="1740623034112" duration="40305000" />
+      <workItem from="1740713758831" duration="19671000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -203,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740505733197</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="...">
+      <option name="closed" value="true" />
+      <created>1740657707355</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740657707355</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +221,7 @@
     <MESSAGE value="исправила инпут и переделала селект" />
     <MESSAGE value="исправила инпут и доделала кастом даты" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
 </project>

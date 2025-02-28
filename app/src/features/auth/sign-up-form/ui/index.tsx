@@ -1,8 +1,12 @@
 import {useSignUpForm} from "../model";
-import Input, {EInputVariant} from "@/shared/ui/inputs/input";
+import Input from "@/shared/ui/inputs/base-input";
 import Button, {EButtonVariant} from "@/shared/ui/buttons";
 import {ERoleID} from "@/entities/auth/sign-up/type";
 import icon from '@/assets/icon.svg';
+import PasswordInput from "@/shared/ui/inputs/password-input";
+import {inputsStyles} from "@/shared/ui/inputs/style.ts";
+import {cn} from "@/shared/utils/cn";
+import InputCheckboxRadio from "@/shared/ui/inputs/checkbox-radio-input";
 
 const SignUpForm = () => {
     const {
@@ -12,6 +16,7 @@ const SignUpForm = () => {
         errors,
 
     } = useSignUpForm();
+
     return (
         <form onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col px-[76px] py-[40px] gap-[62px] w-[626px] bg-white rounded-[45px]">
@@ -32,9 +37,8 @@ const SignUpForm = () => {
                                     message: "Поле введено некорректно"
                                 }
                             })}
-                            variant={EInputVariant.BASE}
                             placeholder="Имя*"
-                            className={`w-[474px] ${errors.firstname ? "border-errorPrimary bg-errorSecondary" : ""}`}
+                            className={cn(inputsStyles({ error: !!errors.firstname }), "w-[474px]")}
                         />
                         {errors.firstname && <p className="pt-1 text-errorPrimary">{errors.firstname.message}</p>}
                     </div>
@@ -47,9 +51,8 @@ const SignUpForm = () => {
                                     message: "Поле введено некорректно"
                                 }
                             })}
-                            variant={EInputVariant.BASE}
                             placeholder="Фамилия*"
-                            className={`w-[474px] ${errors.surname ? "border-errorPrimary bg-errorSecondary" : ""}`}
+                            className={cn(inputsStyles({ error: !!errors.surname }), "w-[474px]")}
                         />
                         {errors.surname && <p className="pt-1 text-errorPrimary">{errors.surname.message}</p>}
                     </div>
@@ -58,19 +61,18 @@ const SignUpForm = () => {
                             {...register("email", {
                                 required: "Поле обязательно к заполнению",
                                 pattern: {
-                                    value: /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                                     message: "Поле введено некорректно"
                                 }
                             })}
-                            variant={EInputVariant.BASE}
                             type="email"
                             placeholder="E-mail*"
-                            className={`w-[474px] ${errors.email ? "border-errorPrimary bg-errorSecondary" : ""}`}
+                            className={cn(inputsStyles({ error: !!errors.email }), "w-[474px]")}
                         />
                         {errors.email && <p className="pt-1 text-errorPrimary">{errors.email.message}</p>}
                     </div>
                     <div>
-                        <Input
+                        <PasswordInput
                             {...register("password", {
                                 required: "Поле обязательно к заполнению",
                                 minLength: {
@@ -86,36 +88,41 @@ const SignUpForm = () => {
                                     message: "Поле введено некорректно"
                                 }
                             })}
-                            variant={EInputVariant.PASSWORD}
                             placeholder="Пароль*"
-                            className={`w-[474px] ${errors.password ? "border-errorPrimary bg-errorSecondary" : ""}`}
+                            className={cn(inputsStyles({ error: !!errors.password }), "w-[474px]")}
                         />
                         {errors.password && <p className="pt-1 text-errorPrimary">{errors.password.message}</p>}
                     </div>
 
                     <div className="flex flex-col gap-[23px] justify-start">
-                        <label className={`flex items-center gap-2 ${errors.role_id ? "text-errorPrimary" : ""}`}>
-                            <Input
-                                {...register("role_id", {required: "Выберите форму использования"})}
-                                variant={EInputVariant.RADIO}
+                        <label
+                            className={`flex items-center gap-2 ${errors.role_id ? "text-errorPrimary" : ""}`}
+                        >
+                            <InputCheckboxRadio
+                                {...register("role_id", { required: "Выберите форму использования" })}
                                 type="radio"
                                 value={ERoleID.USER}
-                                className={errors.role_id ? "border-errorPrimary" : ""}
+                                name="role_id"
+                                className={cn(inputsStyles({ error: !!errors.role_id }))}
                             />
-                            <span
-                                className={`${errors.role_id ? "text-errorPrimary" : ""}`}>Для личного использования</span>
+                            <span className={`${errors.role_id ? "text-errorPrimary" : ""}`}>
+                                Для личного использования
+                            </span>
                         </label>
 
-                        <label className={`flex items-center gap-2 ${errors.role_id ? "text-errorPrimary" : ""}`}>
-                            <Input
-                                {...register("role_id", {required: "Выберите форму использования"})}
-                                variant={EInputVariant.RADIO}
+                        <label
+                            className={`flex items-center gap-2 ${errors.role_id ? "text-errorPrimary" : ""}`}
+                        >
+                            <InputCheckboxRadio
+                                {...register("role_id", { required: "Выберите форму использования" })}
                                 value={ERoleID.ADMIN}
                                 type="radio"
-                                className={errors.role_id ? "border-errorPrimary" : ""}
-
+                                name="role_id"
+                                className={cn(inputsStyles({ error: !!errors.role_id }))}
                             />
-                            <span className={`${errors.role_id ? "text-errorPrimary" : ""}`}>Для совместного использования</span>
+                            <span className={`${errors.role_id ? "text-errorPrimary" : ""}`}>
+                                Для совместного использования
+                            </span>
                         </label>
                     </div>
                 </div>

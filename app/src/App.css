@@ -7,6 +7,7 @@ body {
     min-height: 1280px;
     background-color: rgba(84, 56, 126, 0.5);
     font-family: "Nunito", sans-serif;
+    font-size: 20px;
 }
 
 @theme {
@@ -33,6 +34,7 @@ body {
         margin: 0;
     }
 
+
     ::-webkit-search-cancel-button {
         display: none;
     }
@@ -45,7 +47,7 @@ body {
         @apply text-[64px] ;
     }
     h2 {
-        @apply text-[40px];
+        @apply text-[40px] ;
     }
     a{
         @apply text-gray hover:text-lightPurple active:text-purple dark:text-white;
@@ -91,7 +93,6 @@ body {
     hover:shadow-[0_0_20px_var(--color-shadowBorder)] text-[32px];
 }
 
-
 .input-checkbox {
     @apply flex items-center justify-center rounded-[5px] border border-purple cursor-pointer
     transition-all min-w-[20px] min-h-[20px]
@@ -118,19 +119,6 @@ body {
     hover:text-purple dark:hover:text-purple whitespace-nowrap;
 }
 
-.custom-calendar-datepicker, .react-datepicker__header  {
-    @apply bg-white dark:bg-darkPurple  shadow-[0_0_20px_var(--color-shadowBorder)]
-}
-.react-datepicker__current-month{
-    @apply text-black dark:text-white font-[16px]
-}
-.custom-calendar-datepicker__day {
-    @apply text-black dark:text-white hover:bg-purple hover:text-white transition
-}
-
-.custom-calendar-datepicker__week {
-    @apply text-purple text-lg hover:bg-purple hover:text-white rounded-lg transition
-}
 .react-datepicker__day--selected{
     @apply bg-purple text-white
 }

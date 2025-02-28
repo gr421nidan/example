@@ -11,19 +11,14 @@ interface IFormData {
 }
 
 export const useSignUpForm = () => {
-    const { register, handleSubmit, formState: { errors }, setError } = useForm<IFormData>();
+    const { register, handleSubmit, formState: { errors }, setError, watch} = useForm<IFormData>();
     const { mutateAsync } = useSignUpMutation(setError);
     const onSubmit = async (data: IFormData) => {
         const formattedData = {
             ...data,
             role_id: Number(data.role_id),
         };
-        try {
-            await mutateAsync(formattedData);
-            alert("Регистрация прошла успешно!");
-        } catch (error) {
-            alert("Ошибка при регистрации.");
-        }
+        await mutateAsync(formattedData);
     };
 
     return {
@@ -31,5 +26,6 @@ export const useSignUpForm = () => {
         handleSubmit,
         onSubmit,
         errors,
+        watch
     };
 };

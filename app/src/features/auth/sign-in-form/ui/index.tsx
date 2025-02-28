@@ -1,7 +1,11 @@
 import {useSignInForm} from "../model";
-import Input, {EInputVariant} from "@/shared/ui/inputs/input";
+import Input from "@/shared/ui/inputs/base-input";
+
 import Button, {EButtonVariant} from "@/shared/ui/buttons";
 import icon from '@/assets/icon.svg';
+import PasswordInput from "@/shared/ui/inputs/password-input";
+import {cn} from "@/shared/utils/cn";
+import {inputsStyles} from "@/shared/ui/inputs/style.ts";
 
 
 const SignInForm = () => {
@@ -30,15 +34,14 @@ const SignInForm = () => {
                                         message: "Поле введено некорректно"
                                     }
                                 })}
-                                variant={EInputVariant.BASE}
                                 type="email"
                                 placeholder="E-mail*"
-                                className={`w-[474px] ${errors.email ? "border-errorPrimary bg-errorSecondary" : ""}`}
+                                className={cn(inputsStyles({ error: !!errors.email }), "w-[474px]")}
                             />
                             {errors.email && <p className="pt-1 text-errorPrimary">{errors.email.message}</p>}
                         </div>
                         <div>
-                            <Input
+                            <PasswordInput
                                 {...register("password", {
                                     required: "Поле обязательно к заполнению",
                                     minLength: {
@@ -55,9 +58,8 @@ const SignInForm = () => {
                                     }
                                 })}
                                 type="text"
-                                variant={EInputVariant.PASSWORD}
                                 placeholder="Пароль*"
-                                className={`w-[474px] ${errors.password ? "border-errorPrimary bg-errorSecondary" : ""}`}
+                                className={cn(inputsStyles({ error: !!errors.password }), "w-[474px]")}
                             />
                             {errors.password && <p className="pt-1 text-errorPrimary">{errors.password.message}</p>}
                         </div>
