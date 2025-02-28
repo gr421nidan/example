@@ -13,9 +13,9 @@ import {
     inputContainerStyles,
     errorTextStyles,
     headerStyles,
-    iconStyles, radioContainerStyles, flexCol
+    iconStyles, radioContainerStyles, flexCol, linkStyles
 } from "../../style.ts";
-import { validationRules } from "@/entities/auth/validations";
+import { validationRules } from "@/features/auth/validation-auth-form";
 
 const SignUpForm = () => {
     const {register, handleSubmit, onSubmit, errors} = useSignUpForm();
@@ -84,7 +84,7 @@ const SignUpForm = () => {
                     variant={EButtonVariant.BASE}
                     type="submit"
                     label="Зарегистрироваться"/>
-                <div className="flex gap-2 text-[20px]">
+                <div className={linkStyles()}>
                     <p>Уже есть аккаунт?</p>
                     <a href='/'>Войти</a>
                 </div>

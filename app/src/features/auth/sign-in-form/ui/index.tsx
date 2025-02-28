@@ -1,12 +1,14 @@
 import {useSignInForm} from "../model";
 import Input from "@/shared/ui/inputs/base-input";
-
+import { validationRules } from "@/features/auth/validation-auth-form";
 import Button, {EButtonVariant} from "@/shared/ui/buttons";
 import icon from '@/assets/icon.svg';
 import PasswordInput from "@/shared/ui/inputs/password-input";
 import {cn} from "@/shared/utils/cn";
 import {inputsStyles} from "@/shared/ui/inputs/style.ts";
-
+import {
+    formContainerStyles, formAuthStyles, errorTextStyles, headerStyles, linkStyles
+} from "../../style.ts";
 
 const SignInForm = () => {
     const {
@@ -17,53 +19,30 @@ const SignInForm = () => {
     } = useSignInForm();
     return (
         <form onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col px-[76px] pb-[40px] pt-[52px] gap-[120px] w-[626px] min-h-[697px] bg-white rounded-[45px]">
-            <div className="flex flex-col gap-[30px] items-center">
-                <div className="bg-lightPurple rounded-[12px] px-3 w-fit">
+              className={cn(formAuthStyles(), "pt-[52px] min-h-[697px]")}>
+            <div  className={cn(formContainerStyles(), "gap-[30px]")}>
+                <div className={headerStyles()}>
                     <h2>Авторизация</h2>
                 </div>
-                <div className="flex flex-col gap-[48px] items-center">
+                <div  className={cn(formContainerStyles(), "gap-[48px]")}>
                     <img src={icon} width="100" alt="Иконка облачного хранилища"/>
-                    <div className="flex flex-col gap-[24px]">
+                    <div className={formContainerStyles()}>
                         <div>
                             <Input
-                                {...register("email", {
-                                    required: "Поле обязательно к заполнению",
-                                    pattern: {
-                                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                                        message: "Поле введено некорректно"
-                                    }
-                                })}
+                                {...register("email", validationRules.email)}
                                 type="email"
                                 placeholder="E-mail*"
-                                className={cn(inputsStyles({ error: !!errors.email }), "w-[474px]")}
-                            />
-                            {errors.email && <p className="pt-1 text-errorPrimary">{errors.email.message}</p>}
+                                className={cn(inputsStyles({ error: !!errors.email }), "w-[474px]")}/>
+                            {errors.email && <p className={errorTextStyles()}>{errors.email.message}</p>}
                         </div>
                         <div>
                             <PasswordInput
-                                {...register("password", {
-                                    required: "Поле обязательно к заполнению",
-                                    minLength: {
-                                        value: 8,
-                                        message: "Пароль должен содержать от 8 до 65 символов"
-                                    },
-                                    maxLength: {
-                                        value: 65,
-                                        message: "Пароль должен содержать от 8 до 65 символов"
-                                    },
-                                    pattern: {
-                                        value: /^[a-zA-Z0-9!@#$%^&*()_+.[\]{};":'<>?,/~`-]{8,65}$/,
-                                        message: "Поле введено некорректно"
-                                    }
-                                })}
-                                type="text"
+                                {...register("password", validationRules.password)}
                                 placeholder="Пароль*"
-                                className={cn(inputsStyles({ error: !!errors.password }), "w-[474px]")}
-                            />
-                            {errors.password && <p className="pt-1 text-errorPrimary">{errors.password.message}</p>}
+                                className={cn(inputsStyles({error: !!errors.password}), "w-[474px]")}/>
+                            {errors.password && <p className={errorTextStyles()}>{errors.password.message}</p>}
                         </div>
-                        <div className="flex gap-2 text-[20px] justify-center">
+                        <div className={linkStyles()}>
                             <p>Забыли пароль?</p>
                             <a href='/'>Восстановить</a>
                         </div>
@@ -71,14 +50,13 @@ const SignInForm = () => {
                 </div>
 
             </div>
-            <div className="flex flex-col gap-[24px] items-center">
+            <div className={formContainerStyles()}>
                 <Button
                     className="w-[172px]"
                     variant={EButtonVariant.BASE}
                     type="submit"
-                    label="Войти"
-                />
-                <div className="flex gap-2 text-[20px]">
+                    label="Войти"/>
+                <div className={linkStyles()}>
                     <p>Нет аккаунта?</p>
                     <a href='/'>Зарегистрироваться</a>
                 </div>

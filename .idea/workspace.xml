@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="даа">
-      <change afterPath="$PROJECT_DIR$/app/src/entities/auth/validations/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/features/auth/style.ts" afterDir="false" />
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="почистила регистрацию">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/entities/auth/validations/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/validation-auth-form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/features/auth/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/style.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,7 @@
       <workItem from="1740469787868" duration="13746000" />
       <workItem from="1740488412566" duration="17180000" />
       <workItem from="1740623034112" duration="40305000" />
-      <workItem from="1740713758831" duration="27768000" />
+      <workItem from="1740713758831" duration="29403000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -214,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740735875068</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="почистила регистрацию">
+      <option name="closed" value="true" />
+      <created>1740743238043</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740743238043</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +238,7 @@
     <MESSAGE value="..." />
     <MESSAGE value="пупупу" />
     <MESSAGE value="даа" />
-    <option name="LAST_COMMIT_MESSAGE" value="даа" />
+    <MESSAGE value="почистила регистрацию" />
+    <option name="LAST_COMMIT_MESSAGE" value="почистила регистрацию" />
   </component>
 </project>

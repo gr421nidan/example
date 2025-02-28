@@ -31,3 +31,7 @@ export const headerStyles = cva(
 export const iconStyles = cva(
     "absolute text-white opacity-0 peer-checked:opacity-100"
 );
+
+export const linkStyles = cva(
+    "flex gap-2 text-[20px]"
+);
