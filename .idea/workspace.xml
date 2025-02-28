@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/date/style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/base-input/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/file-input/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/otp-input/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/password-input/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/style.ts" afterDir="false" />
+    <list default="true" id="95829f26-1f6b-4106-8702-5dd88f0bacf2" name="Changes" comment="пупупу">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-in-form/ui/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/model/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/model/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/features/auth/sign-up-form/ui/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/mainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/date/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/otpInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/shared/ui/inputs/checkbox-radio-input/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +109,7 @@
       <workItem from="1740469787868" duration="13746000" />
       <workItem from="1740488412566" duration="17180000" />
       <workItem from="1740623034112" duration="40305000" />
-      <workItem from="1740713758831" duration="19671000" />
+      <workItem from="1740713758831" duration="20589000" />
     </task>
     <task id="LOCAL-00001" summary="Тема и кнопки">
       <option name="closed" value="true" />
@@ -205,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740657707355</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="пупупу">
+      <option name="closed" value="true" />
+      <created>1740734745349</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740734745349</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +216,7 @@
     <MESSAGE value="исправила инпут и доделала кастом даты" />
     <MESSAGE value="." />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="пупупу" />
+    <option name="LAST_COMMIT_MESSAGE" value="пупупу" />
   </component>
 </project>

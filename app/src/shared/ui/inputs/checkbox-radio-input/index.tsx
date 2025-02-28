@@ -1,44 +1,38 @@
-import {FC, InputHTMLAttributes, useState} from "react";
-import {Icon} from "@iconify/react";
-import {cn} from "@/shared/utils/cn";
-import {inputsStyles} from "../style";
+import { forwardRef, InputHTMLAttributes } from "react";
+import { Icon } from "@iconify/react";
+import { cn } from "@/shared/utils/cn";
+import { inputsStyles } from "../style";
 
 interface IInputCheckboxRadioProps extends InputHTMLAttributes<HTMLInputElement> {
     type: "checkbox" | "radio";
+    name: string;
 }
 
-const InputCheckboxRadio: FC<IInputCheckboxRadioProps> = ({type, checked = false, className, ...props}) => {
-    const [isChecked, setIsChecked] = useState(false);
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setIsChecked(event.target.checked);
-    };
-
-    return (
-        <label className="relative inline-flex items-center cursor-pointer">
-            <input
-                {...props}
-                type={type}
-                checked={isChecked}
-                onChange={handleChange}
-                className={cn(
-                    inputsStyles({ variant: "check" }),
-                    "appearance-none",
-                    isChecked
-                        ? "bg-purple dark:bg-buttonBg shadow-[0_0_20px_var(--color-shadowBorder)]"
-                        : "bg-white",
-                    className
-                )}
-            />
-            {isChecked && (
+const InputCheckboxRadio = forwardRef<HTMLInputElement, IInputCheckboxRadioProps>(
+    ({ type, name, className, ...props }, ref) => {
+        return (
+            <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                    {...props}
+                    ref={ref}
+                    type={type}
+                    name={name}
+                    className={cn(
+                        inputsStyles({ variant: "check" }),
+                        "appearance-none peer",
+                        "checked:bg-purple checked:border-transparent",
+                        className
+                    )}
+                />
                 <Icon
                     icon="uil:check"
-                    className="absolute pointer-events-none text-white w-full h-full flex items-center justify-center"
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100"
                 />
-            )}
-        </label>
+            </label>
+        );
+    }
+);
 
-    );
-};
+InputCheckboxRadio.displayName = "InputCheckboxRadio"; // Нужно для `forwardRef`
 
 export default InputCheckboxRadio;
